@@ -1,0 +1,322 @@
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(8, 6, 57);
+  color: white;
+}
+
+/* <!-- -------------- Header(logo and nav menu) -------------- --> */
+.container {
+  padding: 20px 30px;
+  width: 100%;
+}
+.header {
+  background: rgba(2, 45, 7, 0.815);
+  position: relative;
+  transition: all 0.2s;
+}
+.header:hover {
+  background: rgba(5, 59, 11, 0.815);
+}
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+  position: sticky;
+  top: 0;
+}
+
+/* <!-- -------------- Header(logo) -------------- --> */
+.logo h1 {
+  font-size: clamp(4px, 3vw, 25px);
+  flex-basis: 30%;
+  text-shadow: 0px 0px 5px aquamarine, 0px 0px 5px rgb(0, 255, 234);
+  cursor: pointer;
+}
+
+/* <!-- -------------- Header(nav menu) -------------- --> */
+.nav-menu ul {
+  flex-basis: 70%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+.nav-menu ul li a {
+  text-decoration: none;
+  color: white;
+  position: relative;
+  transition: all 0.5s;
+}
+.nav-menu ul li a:hover {
+  color: aqua;
+}
+.nav-menu ul li a::after {
+  content: "";
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  background: red;
+}
+.nav-menu ul li a:hover::after {
+  color: aqua;
+  width: 100%;
+  transition: all 0.5s;
+}
+.nav-menu ul li .search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(100, 255, 183);
+  border-bottom: 2px solid rgb(100, 255, 183);
+  background-color: white;
+  border-radius: 5px;
+}
+.nav-menu ul li input {
+  font-size: 20px;
+  padding: 3px 10px;
+  outline: none;
+  width: 200px;
+  border: none;
+  border-radius: 5px;
+}
+.nav-menu ul li i {
+  font-size: 20px;
+  padding: 5px;
+  color: black;
+  transition: all 0.2s;
+}
+.nav-menu ul li:hover {
+  i {
+    transform: scale(1.1);
+  }
+}
+.mobile-menu {
+  display: none;
+}
+/* <!-- -------------- update -------------- --> */
+.update {
+  margin-top: 10px;
+  display: flex;
+  gap: 30px;
+}
+.image img {
+  width: 250px;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  border: 1px solid black;
+  flex-basis: 30%;
+  transition: all 0.3s;
+}
+.image img:hover {
+  box-shadow: 12px 5px 2px rgb(48, 40, 81);
+}
+.details {
+  flex-basis: 100%;
+  background: rgba(24, 23, 23, 0.703);
+  color: white;
+  padding: 20px;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  transition: all 0.3s;
+}
+.details:hover {
+  background: rgba(41, 40, 40, 0.703);
+}
+.details h1,
+p {
+  padding-top: 10px;
+}
+
+/* <!-- -------------- Tablet -------------- --> */
+@media screen and (min-width: 651px) and (max-width: 800px) {
+  .details h1 {
+    font-size: 25px;
+  }
+  .details p {
+    font-size: 10px;
+  }
+}
+
+/* <!-- -------------- Chapters -------------- --> */
+.summary {
+  margin-top: 100px;
+}
+.chapter {
+  display: flex;
+  gap: 10px;
+  background: rgba(20, 44, 40, 0.884);
+}
+.chapter-list {
+  flex-basis: 60%;
+}
+.chapter-list a {
+  text-decoration: none;
+  color: white;
+}
+.chapter-list h1:first-child,
+.languages-ads h1 {
+  font-size: 15px;
+  background-color: rgba(14, 31, 28, 0.884);
+  padding: 5px 15px;
+  /* border: 2px solid; */
+}
+.chapter-all {
+  height: 120px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+  background-color: rgba(16, 44, 40, 0.884);
+  transition: all 0.2s;
+}
+.chapter-all:hover {
+  background-color: rgba(30, 63, 58, 0.884);
+  img {
+    margin-left: 0px;
+  }
+}
+.chapter-1 {
+  margin-top: 40px;
+}
+.chapter-all img {
+  width: 180px;
+  height: 100px;
+  margin-left: 5px;
+  transition: all 0.2s;
+}
+.text {
+  margin-left: 10px;
+}
+.text h1 {
+  display: inline-block;
+}
+
+/* <!-- -------------- languages and ads -------------- --> */
+.languages-ads {
+  flex-basis: 40%;
+}
+.languages {
+  margin-top: 40px;
+  border-bottom: 1px solid;
+}
+.languages button {
+  font-size: 25px;
+  cursor: pointer;
+  background: maroon;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 8px 20px;
+  transform: scale(0.8);
+  transition: all 0.2s;
+  margin-bottom: 40px;
+}
+.languages button:hover {
+  background: rgb(122, 51, 51);
+  transform: scale(0.9);
+}
+.update-schedule button {
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  background: rgb(248, 245, 67);
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: black;
+}
+
+/* <!-- -------------- Footer -------------- --> */
+.footer{
+  background: rgb(72, 101, 90);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.about{
+  flex-basis: 60%;
+}
+.about ul{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.about ul li a{
+  text-decoration: none;
+  color: white;
+}
+.about ul li a:hover{
+  text-shadow: 0px 0px 5px;
+}
+
+/* <!-- -------------- Responsive -------------- --> */
+@media screen and (max-width: 650px) {
+  .header h1, .footer h1 {
+    font-size: 20px;
+  }
+  .nav-menu ul {
+    display: none;
+  }
+  .mobile-menu {
+    display: inline-block;
+    z-index: 1;
+    cursor: pointer;
+  }
+  .update {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .details h1 {
+    font-size: 25px;
+  }
+  .details p {
+    font-size: medium;
+  }
+  .chapter {
+    flex-direction: column;
+  }
+  .chapter-all {
+    height: fit-content;
+  }
+  .chapter-all img {
+    width: 100px;
+    height: fit-content;
+  }
+  .update-schedule button {
+    margin-left: 10px;
+  }
+
+  /* <!-- -------------- Responsive NavBar -------------- --> */
+  .small-screen ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(17, 17, 77);
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+  }
+  .small-screen ul li {
+    margin: 10px;
+  }
+}
