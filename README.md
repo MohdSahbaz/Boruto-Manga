@@ -18,7 +18,7 @@ A simple web project showcasing a manga reader for Boruto, built with HTML, CSS,
 
 1. Clone this repository to your local machine:
    ```bash
-   git clone https://github.com/your-username/Boruto-Manga.git
+   git clone https://github.com/MohdSahbaz/Boruto-Manga.git
    ```
 2. Open the `index.html` file in your web browser to view the project.
 
