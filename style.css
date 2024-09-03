@@ -15,6 +15,8 @@ body {
 .container {
   padding: 20px 30px;
   width: 100%;
+  position: sticky;
+  top: 0;
 }
 .header {
   background: rgba(2, 45, 7, 0.815);
@@ -239,7 +241,7 @@ p {
 }
 
 /* <!-- -------------- Footer -------------- --> */
-.footer{
+.footer {
   background: rgb(72, 101, 90);
   padding: 20px;
   display: flex;
@@ -247,10 +249,10 @@ p {
   align-items: center;
   gap: 10px;
 }
-.about{
+.about {
   flex-basis: 60%;
 }
-.about ul{
+.about ul {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -258,17 +260,18 @@ p {
   flex-wrap: wrap;
   gap: 10px;
 }
-.about ul li a{
+.about ul li a {
   text-decoration: none;
   color: white;
 }
-.about ul li a:hover{
+.about ul li a:hover {
   text-shadow: 0px 0px 5px;
 }
 
 /* <!-- -------------- Responsive -------------- --> */
 @media screen and (max-width: 650px) {
-  .header h1, .footer h1 {
+  .header h1,
+  .footer h1 {
     font-size: 20px;
   }
   .nav-menu ul {
